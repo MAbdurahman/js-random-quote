@@ -1,3 +1,8 @@
+
+
+
+
+
 $(function () {
     console.log('The DOM is ready to be used.');
 
@@ -7,15 +12,24 @@ $(function () {
     const quote_author = document.getElementById('author');
     const button_twitter = document.getElementById('twitter-button');
     const button_quote = document.getElementById('new-quote');
+    const loader = document.getElementById('loader');
 
     let api_quotes = [];
 
-
+    function showLoading() {
+        loader.hidden = false;
+        quote_container.hidden = true;
+    }
+    function completeLoading() {
+        loader.hidden = true;
+        quote_container.hidden = false;
+    }
     /**
      * @description -
      * @returns {Promise<void>}
      */
     async function getQuotes() {
+        showLoading();
         const api_url = `https://mabdurahman.github.io/quotes-api/data/quotes.json`;
         try {
             const response = await fetch(api_url);
@@ -35,6 +49,7 @@ $(function () {
      * @description -
      */
     function getNewQuote() {
+        showLoading();
         // Pick a random quote from array
         const index = Math.floor(Math.random() * api_quotes.length);
         const quote = api_quotes[index];
@@ -53,7 +68,7 @@ $(function () {
         }
         // Set Quote and Hide Loader
         quote_text.textContent = quote.text;
-
+        completeLoading();
     }
 
     /**
@@ -69,6 +84,7 @@ $(function () {
     button_twitter.addEventListener('click', getTwitterQuote);
 
     getQuotes();
+
 
 
 });

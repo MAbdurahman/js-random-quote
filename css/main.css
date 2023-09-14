@@ -156,7 +156,42 @@ button:active {
 }
 
 
+.loader {
+    width: 200px;
+    height: 200px;
+}
 
+.loader-gif {
+    width: 100%;
+    height: auto;
+}
+
+/*If you want the image to scale both up and down on responsiveness,
+set CSS width property to 100% and height to auto*/
+.u-img-responsive-up-and-down {
+    width: 100%;
+    height: auto;
+}
+
+/*If you want the image to scale down if it has to, but never scale up
+to be larger than its original size, use CSS max-width property to 100%
+and height to auto*/
+.u-img-responsive-down {
+    max-width: 100%;
+    height: auto;
+}
+
+/*If you want to restrict the image to a maximum size, set CSS width property
+to 100%, max-width property to a pixel value of choice, and height to auto*/
+.u-img-responsive-up-to {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.u-img-responsive {
+    vertical-align: middle;
+}
 
 
 
