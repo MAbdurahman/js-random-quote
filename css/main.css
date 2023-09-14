@@ -50,7 +50,6 @@ a {
 /**************** fonts ****************/
    --ff-font-primary: 'Montserrat', sans-serif;
 
-
 /**************** font weight ****************/
     --fw-font-weight-thin: 100;
     --fw-font-weight-light: 300;
@@ -100,7 +99,6 @@ a {
     }
 }
 
-
 body {
     min-height: 100vh;
     display: flex;
@@ -115,6 +113,9 @@ body {
 
 }
 
+/*=============================================
+          quotes
+================================================*/
 .quote-container {
     width: auto;
     max-width: 896px;
@@ -143,6 +144,9 @@ body {
     font-style: italic;
 }
 
+/*=============================================
+          buttons
+================================================*/
 .button-container {
     margin-top: 16px;
     display: flex;
@@ -180,7 +184,6 @@ button:active {
     font-size: 1.5rem;
 }
 
-
 .tooltip {
     position: relative;
 }
@@ -205,6 +208,23 @@ button:active {
 
 .tooltip:hover .tooltip-text {
     visibility: visible;
+}
+
+/*=============================================
+          sweetalert buttons
+================================================*/
+.swal-button {
+    background-color: #111111;
+    color: #d9d9d9;
+}
+
+.swal-button:not([disabled]):hover {
+    background: #626262 radial-gradient(circle, transparent 1%, #626262 1%) center/15000%;
+}
+
+.swal-button--cancel {
+    color: #d9d9d9;
+    background-color: #111111;
 }
 
 .loader {

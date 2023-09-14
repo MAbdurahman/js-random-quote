@@ -7,7 +7,6 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    console.log('The DOM is ready to be used.');
 
     //**************** variables ****************//
     const quote_container = document.getElementById('quote-container');
@@ -19,10 +18,17 @@ $(function () {
 
     let api_quotes = [];
 
+    /**
+     * @description
+     */
     function showLoading() {
         loader.hidden = false;
         quote_container.hidden = true;
     }
+
+    /**
+     * @description -
+     */
     function completeLoading() {
         loader.hidden = true;
         quote_container.hidden = false;
@@ -49,7 +55,7 @@ $(function () {
     }
 
     /**
-     * @description -
+     * @description - -
      */
     function getNewQuote() {
         showLoading();
@@ -84,12 +90,9 @@ $(function () {
         window.open(twitter_url, '_blank');
     }
 
-
     button_quote.addEventListener('click', getNewQuote);
     button_twitter.addEventListener('click', getTwitterQuote);
 
     getQuotes();
-
-
 
 });
