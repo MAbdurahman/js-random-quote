@@ -71,7 +71,9 @@ $(function () {
         }
         // Set Quote and Hide Loader
         quote_text.textContent = quote.text;
-        completeLoading();
+        setTimeout(() => {
+            completeLoading();
+        }, 750)
     }
 
     /**
