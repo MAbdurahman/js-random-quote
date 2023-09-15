@@ -39,7 +39,7 @@ $(function () {
      */
     async function getQuotes() {
         showLoading();
-        const api_url = `https://mabdurahman.github.io/quotes-api/data/quotes.json`;
+        const api_url = `https://mabdurahman.github.io/quotes-api-ii/data/quotes.json`;
         try {
             const response = await fetch(api_url);
             api_quotes = await response.json();
