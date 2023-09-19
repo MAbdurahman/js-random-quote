@@ -1,4 +1,4 @@
-# js-template.js
+# js-random-quote
 
 ## brief description
 This repo is a simple HTML, CSS, and JavaScript application that utilizes 
